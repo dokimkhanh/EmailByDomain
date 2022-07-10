@@ -1,0 +1,11 @@
+D:\Code\C#\Projects\Mail Filters\Mail Filters\bin\Debug\Mail Filters.exe.config
+D:\Code\C#\Projects\Mail Filters\Mail Filters\bin\Debug\Mail Filters.exe
+D:\Code\C#\Projects\Mail Filters\Mail Filters\bin\Debug\Mail Filters.pdb
+D:\Code\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.csproj.AssemblyReference.cache
+D:\Code\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.csproj.SuggestedBindingRedirects.cache
+D:\Code\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail_Filters.Form1.resources
+D:\Code\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail_Filters.Properties.Resources.resources
+D:\Code\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.csproj.GenerateResource.cache
+D:\Code\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.csproj.CoreCompileInputs.cache
+D:\Code\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.exe
+D:\Code\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.pdb
