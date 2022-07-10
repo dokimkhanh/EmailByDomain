@@ -1,2 +1,4 @@
 # Mail-Filter-Pro
-Filter mail domain from list
+Help categorize Email by domain name
+
+# Screenshot
