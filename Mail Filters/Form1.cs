@@ -140,5 +140,16 @@ namespace Mail_Filters
             }
             saveFileDialog1.Dispose();
         }
+
+        private void contactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homepageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Open Github Page
+            Process.Start("https://github.com/dokimkhanh/Mail-Filter-Pro");
+        }
     }
 }

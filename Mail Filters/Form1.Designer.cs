@@ -30,30 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMail = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtResults = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openMailListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveResultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.saveResultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearResultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.txtMail = new System.Windows.Forms.TextBox();
+            this.clearResultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelTotal = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelResults = new System.Windows.Forms.Label();
             this.telegramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homepageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.labelResults = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -69,6 +69,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mail List";
+            // 
+            // txtMail
+            // 
+            this.txtMail.BackColor = System.Drawing.SystemColors.Control;
+            this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMail.Location = new System.Drawing.Point(3, 16);
+            this.txtMail.Multiline = true;
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(298, 186);
+            this.txtMail.TabIndex = 0;
             // 
             // button1
             // 
@@ -107,15 +118,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Results";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 259);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Domain:";
-            // 
             // txtResults
             // 
             this.txtResults.BackColor = System.Drawing.SystemColors.Control;
@@ -126,6 +128,15 @@
             this.txtResults.Name = "txtResults";
             this.txtResults.Size = new System.Drawing.Size(298, 186);
             this.txtResults.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 259);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Domain:";
             // 
             // menuStrip1
             // 
@@ -157,6 +168,11 @@
             this.openMailListToolStripMenuItem.Text = "Open List";
             this.openMailListToolStripMenuItem.Click += new System.EventHandler(this.openMailListToolStripMenuItem_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
             // saveResultsToolStripMenuItem
             // 
             this.saveResultsToolStripMenuItem.Image = global::Mail_Filters.Properties.Resources.open_file_under_cursor_16px;
@@ -164,11 +180,6 @@
             this.saveResultsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveResultsToolStripMenuItem.Text = "Save Results";
             this.saveResultsToolStripMenuItem.Click += new System.EventHandler(this.saveResultsToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // editToolStripMenuItem
             // 
@@ -188,6 +199,11 @@
             this.clearListToolStripMenuItem.Text = "Clear List";
             this.clearListToolStripMenuItem.Click += new System.EventHandler(this.clearListToolStripMenuItem_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
             // clearResultsToolStripMenuItem
             // 
             this.clearResultsToolStripMenuItem.Image = global::Mail_Filters.Properties.Resources.multiply_16px;
@@ -195,22 +211,6 @@
             this.clearResultsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clearResultsToolStripMenuItem.Text = "Clear Results";
             this.clearResultsToolStripMenuItem.Click += new System.EventHandler(this.clearResultsToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
-            // 
-            // txtMail
-            // 
-            this.txtMail.BackColor = System.Drawing.SystemColors.Control;
-            this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMail.Location = new System.Drawing.Point(3, 16);
-            this.txtMail.Multiline = true;
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(298, 186);
-            this.txtMail.TabIndex = 0;
             // 
             // contactToolStripMenuItem
             // 
@@ -220,6 +220,23 @@
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
             this.contactToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.contactToolStripMenuItem.Text = "Contact";
+            this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
+            // 
+            // telegramToolStripMenuItem
+            // 
+            this.telegramToolStripMenuItem.Image = global::Mail_Filters.Properties.Resources.telegram_app_16px;
+            this.telegramToolStripMenuItem.Name = "telegramToolStripMenuItem";
+            this.telegramToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.telegramToolStripMenuItem.Text = "Telegram";
+            this.telegramToolStripMenuItem.Click += new System.EventHandler(this.telegramToolStripMenuItem_Click);
+            // 
+            // homepageToolStripMenuItem
+            // 
+            this.homepageToolStripMenuItem.Image = global::Mail_Filters.Properties.Resources.github_16px;
+            this.homepageToolStripMenuItem.Name = "homepageToolStripMenuItem";
+            this.homepageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.homepageToolStripMenuItem.Text = "Visit Github";
+            this.homepageToolStripMenuItem.Click += new System.EventHandler(this.homepageToolStripMenuItem_Click);
             // 
             // progressBar1
             // 
@@ -243,33 +260,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Status";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Total: ";
-            // 
-            // labelTotal
-            // 
-            this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(49, 19);
-            this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(13, 13);
-            this.labelTotal.TabIndex = 8;
-            this.labelTotal.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(123, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Results:";
-            // 
             // labelResults
             // 
             this.labelResults.AutoSize = true;
@@ -280,20 +270,32 @@
             this.labelResults.TabIndex = 10;
             this.labelResults.Text = "0";
             // 
-            // telegramToolStripMenuItem
+            // label4
             // 
-            this.telegramToolStripMenuItem.Image = global::Mail_Filters.Properties.Resources.telegram_app_16px;
-            this.telegramToolStripMenuItem.Name = "telegramToolStripMenuItem";
-            this.telegramToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.telegramToolStripMenuItem.Text = "Telegram";
-            this.telegramToolStripMenuItem.Click += new System.EventHandler(this.telegramToolStripMenuItem_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(123, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Results:";
             // 
-            // homepageToolStripMenuItem
+            // labelTotal
             // 
-            this.homepageToolStripMenuItem.Image = global::Mail_Filters.Properties.Resources.github_16px;
-            this.homepageToolStripMenuItem.Name = "homepageToolStripMenuItem";
-            this.homepageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.homepageToolStripMenuItem.Text = "Homepage";
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Location = new System.Drawing.Point(49, 19);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(13, 13);
+            this.labelTotal.TabIndex = 8;
+            this.labelTotal.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Total: ";
             // 
             // Form1
             // 
