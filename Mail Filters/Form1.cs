@@ -73,6 +73,7 @@ namespace Mail_Filters
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Set value = 0
             progressBar1.Value = 0;
 
             if (txtMail.Text == null || txtMail.Text == "")
