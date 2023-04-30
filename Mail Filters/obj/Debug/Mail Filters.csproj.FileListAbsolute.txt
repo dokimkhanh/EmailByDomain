@@ -9,3 +9,14 @@ D:\Code\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.csproj.Gene
 D:\Code\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.csproj.CoreCompileInputs.cache
 D:\Code\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.exe
 D:\Code\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.pdb
+D:\CongViec\C#\Projects\Mail Filters\Mail Filters\bin\Debug\Mail Filters.exe.config
+D:\CongViec\C#\Projects\Mail Filters\Mail Filters\bin\Debug\Mail Filters.exe
+D:\CongViec\C#\Projects\Mail Filters\Mail Filters\bin\Debug\Mail Filters.pdb
+D:\CongViec\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.csproj.AssemblyReference.cache
+D:\CongViec\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.csproj.SuggestedBindingRedirects.cache
+D:\CongViec\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail_Filters.Form1.resources
+D:\CongViec\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail_Filters.Properties.Resources.resources
+D:\CongViec\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.csproj.GenerateResource.cache
+D:\CongViec\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.csproj.CoreCompileInputs.cache
+D:\CongViec\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.exe
+D:\CongViec\C#\Projects\Mail Filters\Mail Filters\obj\Debug\Mail Filters.pdb

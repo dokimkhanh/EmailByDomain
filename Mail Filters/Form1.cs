@@ -19,35 +19,73 @@ namespace Mail_Filters
             InitializeComponent();
         }
 
-        private void clearListToolStripMenuItem_Click(object sender, EventArgs e)
+
+
+        private void button1_Click(object sender, EventArgs e)
         {
+            progressBar1.Value = 0;
+
+            if (txtMail.Text == null || txtMail.Text == "")
+            {
+                MessageBox.Show("Error: No data","Mail Filters Pro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
-                txtMail.Clear();
-                labelTotal.Text = "0";
-                MessageBox.Show("Clear Successful!","Mail Filters Pro",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                progressBar1.Maximum = txtMail.Lines.Length;
+                foreach (var item in txtMail.Lines)
+                {
+                    if (rInclude.Checked)
+                    {
+                        if (item.Contains(comboBox1.Text))
+                        {
+                            txtResults.Invoke(new Action(() =>
+                            {
+                                txtResults.AppendText(item + "\r\n");
+                                labelResults.Text = txtResults.Lines.Length.ToString();
+                            }));
+                        }
+
+                    }
+                    else
+                    {
+                        if (!item.Contains(comboBox1.Text))
+                        {
+                            txtResults.Invoke(new Action(() =>
+                            {
+                                txtResults.AppendText(item + "\r\n");
+                                labelResults.Text = txtResults.Lines.Length.ToString();
+                            }));
+                        }
+                    }
+                    progressBar1.Value++;
+                }
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Clear Error!", "Mail Filters Pro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: Could not start filter. Error: " + ex.Message);
             }
         }
 
-        private void clearResultsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            try
-            {
-                txtResults.Clear();
-                labelResults.Text = "0";
-                MessageBox.Show("Clear Successful!", "Mail Filters Pro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Clear Error!", "Mail Filters Pro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            comboBox1.SelectedItem = null;
+            comboBox1.SelectedText = "--- Select Domain ---";
         }
 
-        private void openMailListToolStripMenuItem_Click(object sender, EventArgs e)
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void homepageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/dokimkhanh/EmailByDomain");
+        }
+
+        private void openItemMenu_Click(object sender, EventArgs e)
         {
             OpenFileDialog theDialog = new OpenFileDialog();
             theDialog.Title = "Open Text File";
@@ -71,56 +109,21 @@ namespace Mail_Filters
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void clearItemMenu_Click(object sender, EventArgs e)
         {
-            //Set value = 0
-            progressBar1.Value = 0;
-
-            if (txtMail.Text == null || txtMail.Text == "")
-            {
-                MessageBox.Show("Error: No data","Mail Filters Pro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             try
             {
-                progressBar1.Maximum = txtMail.Lines.Length;
-                foreach (var item in txtMail.Lines)
-                {
-                    if (item.Contains(comboBox1.Text))
-                    {
-                        txtResults.Invoke(new Action(() =>
-                        {
-                            txtResults.AppendText(item + "\r\n");
-                            labelResults.Text = txtResults.Lines.Length.ToString();
-                        }));
-                    }
-                    progressBar1.Value++;
-                }
-                
+                txtMail.Clear();
+                labelTotal.Text = "0";
+                MessageBox.Show("Clear Successful!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error: Could not start filter. Error: " + ex.Message);
+                MessageBox.Show("Clear Error!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            comboBox1.SelectedItem = null;
-            comboBox1.SelectedText = "--- Select Domain ---";
-        }
-
-        private void telegramToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("http://t.me/yeninong");
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void saveResultsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.DefaultExt = "txt";
@@ -131,25 +134,28 @@ namespace Mail_Filters
             saveFileDialog1.InitialDirectory = @"C:/";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("File save: " + saveFileDialog1.FileName, "Mail Filters Pro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("File save: " + saveFileDialog1.FileName, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 File.WriteAllText(saveFileDialog1.FileName, txtResults.Text);
             }
             else
             {
-                MessageBox.Show("Save cancel!", "Mail Filters Pro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Save cancel!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             saveFileDialog1.Dispose();
         }
 
-        private void contactToolStripMenuItem_Click(object sender, EventArgs e)
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void homepageToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Open Github Page
-            Process.Start("https://github.com/dokimkhanh/Mail-Filter-Pro");
+            try
+            {
+                txtResults.Clear();
+                labelResults.Text = "0";
+                MessageBox.Show("Clear Successful!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Clear Error!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
